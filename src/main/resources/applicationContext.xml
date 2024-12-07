@@ -12,7 +12,10 @@
           class="ru.lodjers.springCore.RockMusic">
     </bean>
     <bean id="ClassicalMusicBean"
-          class="ru.lodjers.springCore.ClassicalMusic">
+          class="ru.lodjers.springCore.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic">
     </bean>
 
     <bean id="musicPlayer"
