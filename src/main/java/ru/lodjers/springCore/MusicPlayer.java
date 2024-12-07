@@ -1,10 +1,13 @@
 package ru.lodjers.springCore;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class MusicPlayer {
-
+    private ClassicalMusic classicalMusic;
     private List<Music> musicList = new ArrayList<>();
     private String name;
     private int volume;
@@ -26,11 +29,16 @@ public class MusicPlayer {
     public void setVolume(int volume) {
         this.volume = volume;
     }
+    @Autowired
+    public void setClassicalMusic(ClassicalMusic classicalMusic) {
+        this.classicalMusic = classicalMusic;
+    }
 
-    public MusicPlayer() {}
-
+    public void playMusic() {
+        System.out.println("Playing: " + classicalMusic.getSong());
+    }
     public void playMusicList() {
-//        System.out.println("Playing: " + music.getSong());
+//
         musicList.forEach(el -> System.out.println("Playing: " + el.getSong()));
     }
 }
