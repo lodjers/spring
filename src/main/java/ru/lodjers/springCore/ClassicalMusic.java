@@ -1,5 +1,8 @@
 package ru.lodjers.springCore;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ClassicalMusic implements Music{
     private ClassicalMusic() {}
     public static ClassicalMusic getClassicalMusic() {
