@@ -34,8 +34,8 @@ public class MusicPlayer {
         this.classicalMusic = classicalMusic;
     }
 
-    public void playMusic() {
-        System.out.println("Playing: " + classicalMusic.getSong());
+    public String playMusic() {
+        return "Playing: " + classicalMusic.getSong();
     }
     public void playMusicList() {
 //
