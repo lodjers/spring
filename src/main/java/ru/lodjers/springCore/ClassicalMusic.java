@@ -2,21 +2,23 @@ package ru.lodjers.springCore;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class ClassicalMusic implements Music{
-    private ClassicalMusic() {}
-    public static ClassicalMusic getClassicalMusic() {
-        return new ClassicalMusic();
-    }
-    public void doMyInit() {
-        System.out.println("Doing my initialization");
+    private List<String> classicalMusicList = new ArrayList<>();
+
+    public List<String> getClassicalMusicList() {
+        return classicalMusicList;
     }
 
-    public void doMyDestroy() {
-        System.out.println("Doing my destruction");
+    public void setClassicalMusicList(List<String> classicalMusicList) {
+        this.classicalMusicList = classicalMusicList;
     }
+
     @Override
     public String getSong() {
-        return "Hungarian Rhapsody";
+        return classicalMusicList.toString();
     }
 }

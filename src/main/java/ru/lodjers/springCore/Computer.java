@@ -8,11 +8,6 @@ public class Computer {
     private int id;
     private MusicPlayer musicPlayer;
 
-    @Override
-    public String toString() {
-        return "Computer " + id +
-                " " + musicPlayer.playMusic();
-    }
     @Autowired
     public Computer(MusicPlayer musicPlayer) {
         this.id = 1;
