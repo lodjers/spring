@@ -7,9 +7,8 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean"
-          class="ru.lodjers.springCore.TestBean">
-        <constructor-arg value="Danya"/>
+    <bean id="musicBean"
+          class="ru.lodjers.springCore.ClassicalMusic">
     </bean>
 
 </beans>
