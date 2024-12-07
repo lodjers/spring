@@ -11,4 +11,9 @@
           class="ru.lodjers.springCore.ClassicalMusic">
     </bean>
 
+    <bean id="musicPlayer"
+          class="ru.lodjers.springCore.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+
 </beans>
