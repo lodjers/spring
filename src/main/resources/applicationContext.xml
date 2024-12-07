@@ -16,7 +16,8 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="ru.lodjers.springCore.MusicPlayer">
+          class="ru.lodjers.springCore.MusicPlayer"
+            scope="prototype">
         <property name="musicList" >
             <list>
                 <ref bean="ClassicalMusicBean"></ref>
