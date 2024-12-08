@@ -9,20 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@Component
 public class MusicPlayer {
+    private List<Music> listOfGenres = new ArrayList<>();
 
-    public String getName() {
-        return name;
+    public MusicPlayer(List<Music> listOfGenres) {
+        this.listOfGenres = listOfGenres;
     }
+    public String playMusic() {
+        Random r = new Random();
+        return listOfGenres.get(r.nextInt(3)).getSong();
 
-    public int getVolume() {
-        return volume;
     }
-    @Value("${musicPlayer.name}")
-    private String name;
-    @Value("${musicPlayer.volume}")
-    private int volume;
-
-
 }
